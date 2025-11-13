@@ -8,6 +8,10 @@ import Contact from "./components/Contact";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Testimonials from "./components/Testimonials";
+import AnimatedBlobs from "./components/AnimatedBlobs";
+import ScrollHandler from "./components/ScrollHandler"; // ✅ add this import
+import ProductDetails from "./pages/ProductDetails";
 
 export default function App() {
   return (
@@ -16,18 +20,22 @@ export default function App() {
         path="/"
         element={
           <>
+            <AnimatedBlobs />
+            <ScrollHandler /> {/* ✅ Step 3: add this line here */}
             <Header />
             <Hero />
             <About />
             <Products />
+            <Testimonials />
             <Contact />
           </>
         }
       />
+       {/* ✅ Product Details Dynamic Route */}
+      <Route path="/product/:id" element={<ProductDetails />} />
 
       <Route path="/login" element={<Login />} />
 
-      {/* ✅ Protect Admin Page */}
       <Route
         path="/admin"
         element={

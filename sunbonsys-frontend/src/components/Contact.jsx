@@ -67,7 +67,8 @@ export default function Contact() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Get in touch with our experts to discuss how our software solutions can streamline your operations and drive growth.
+            Get in touch with our experts to discuss how our software solutions
+            can streamline your operations and drive growth.
           </p>
         </div>
 
@@ -75,10 +76,14 @@ export default function Contact() {
           {/* Form */}
           <div className="lg:col-span-7 bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
             <form onSubmit={handleSubmit} className="space-y-6">
-
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-800 mb-2">First Name</label>
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-800 mb-2"
+                  >
+                    First Name
+                  </label>
                   <input
                     id="firstName"
                     name="firstName"
@@ -90,7 +95,12 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-800 mb-2">Last Name</label>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-800 mb-2"
+                  >
+                    Last Name
+                  </label>
                   <input
                     id="lastName"
                     name="lastName"
@@ -103,7 +113,12 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-800 mb-2">Email Address</label>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-800 mb-2"
+                >
+                  Email Address
+                </label>
                 <input
                   id="email"
                   name="email"
@@ -116,7 +131,12 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-800 mb-2">Company</label>
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-medium text-gray-800 mb-2"
+                >
+                  Company
+                </label>
                 <input
                   id="company"
                   name="company"
@@ -127,7 +147,12 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="product" className="block text-sm font-medium text-gray-800 mb-2">Product Interest</label>
+                <label
+                  htmlFor="product"
+                  className="block text-sm font-medium text-gray-800 mb-2"
+                >
+                  Product Interest
+                </label>
                 <select
                   id="product"
                   name="product"
@@ -136,15 +161,39 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 >
                   <option value="">Select a product</option>
-                  <option value="erp">ERP System</option>
-                  <option value="student">Student Management System</option>
-                  <option value="inventory">Inventory Management System</option>
-                  <option value="custom">Custom Made Solution</option>
+                  <option value="Custom Made Solutions">
+                    Custom Made Solutions
+                  </option>
+                  <option value="ERP System">ERP System</option>
+                  <option value="Student Management System">
+                    Student Management System
+                  </option>
+                  <option value="Inventory Management System">
+                    Inventory Management System
+                  </option>
+                  
+                  <option value="FRA Proposal Guidance">
+                    FRA Proposal Guidance
+                  </option>
+                  <option value="TDS Guidance">TDS Guidance</option>
+                  <option value="PF Guidance">PF Guidance</option>
+                  <option value="Professional Tax">Professional Tax</option>
+                  <option value="Financial Project Developer">
+                    Financial Project Developer
+                  </option>
+                  <option value="Tally Data Import / Export">
+                    Tally Data Import / Export
+                  </option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-800 mb-2">Message</label>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-800 mb-2"
+                >
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -170,22 +219,52 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="lg:col-span-5">
             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-100 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Contact Information
+              </h3>
 
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2M7 8H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2m10-13V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2" /></svg>
+                    <svg
+                      className="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17 8h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2M7 8H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2m10-13V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Address</h4>
-                    <p className="text-gray-700">Jalgaon<br/>Maharashtra,India</p>
+                    <p className="text-gray-700">
+                      Jalgaon
+                      <br />
+                      Maharashtra,India
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m-6 4h.01M9 7v10m6-10v10M3 15h.01M3 19h.01M21 7v.01M21 11v.01M21 15v.01" /></svg>
+                    <svg
+                      className="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 5h12M9 3v2m-6 4h.01M9 7v10m6-10v10M3 15h.01M3 19h.01M21 7v.01M21 11v.01M21 15v.01"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
@@ -195,25 +274,54 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V8" /></svg>
+                    <svg
+                      className="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V8"
+                      />
+                    </svg>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-700">info@sunbonsys.com</p>
+                    <p className="text-gray-700">sunilbonde30@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mr-4">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" /></svg>
+                    <svg
+                      className="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 8v4l3 3"
+                      />
+                    </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Business Hours</h4>
-                    <p className="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM<br/>Saturday: 10:00 AM - 4:00 PM</p>
+                    <h4 className="font-semibold text-gray-900">
+                      Business Hours
+                    </h4>
+                    <p className="text-gray-700">
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                      <br />
+                      Saturday: 10:00 AM - 4:00 PM
+                    </p>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

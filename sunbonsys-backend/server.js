@@ -35,6 +35,15 @@ db.run(`
   )
 `);
 
+// ✅ Create Table for Visit Counts
+db.run(`
+  CREATE TABLE IF NOT EXISTS visits (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    page TEXT UNIQUE,
+    count INTEGER DEFAULT 0
+  )
+`);
+
 // ✅ Save Form Data
 app.post("/submit", (req, res) => {
   const { firstName, lastName, email, company, product, message } = req.body;
@@ -87,6 +96,31 @@ app.get("/export", (req, res) => {
 
     await workbook.xlsx.write(res);
     res.end();
+  });
+});
+
+// ✅ Record a website visit
+app.post("/visit", (req, res) => {
+  const { page } = req.body;
+
+  db.get("SELECT count FROM visits WHERE page = ?", [page], (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
+
+    if (row) {
+      db.run("UPDATE visits SET count = count + 1 WHERE page = ?", [page]);
+    } else {
+      db.run("INSERT INTO visits (page, count) VALUES (?, 1)", [page]);
+    }
+
+    res.json({ success: true });
+  });
+});
+
+// ✅ Get all page visit counts
+app.get("/visits", (req, res) => {
+  db.all("SELECT * FROM visits", [], (err, rows) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(rows);
   });
 });
 
